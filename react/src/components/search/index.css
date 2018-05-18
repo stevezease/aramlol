@@ -1,0 +1,96 @@
+.right-panel {
+    position: absolute;
+    right: 0px;
+    width: 35%;
+    z-index: 10;
+}
+
+.left-panel {
+    position: absolute;
+    left: 0px;
+    height: 80%;
+    bottom: 0px;
+    z-index: 10;
+}
+
+.search-bar {
+    position: absolute;
+    width: 56%;
+    background-color: white;
+    padding: 10px;
+    padding-top: 0px;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: calc(50% + 75px);
+    box-shadow: 1px 1px 3px #0b2238;
+}
+
+.search-banner {
+    position: absolute;
+    color: white;
+    left: calc(50% - 178px);
+    top: 35%;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+}
+.search-banner > h1 {
+    font-family: 'Berthold Akzidenz Condensed';
+    font-size: 110px;
+    text-shadow: 2px 2px 2px #0b2238;
+}
+.search-banner-lol {
+    font-size: 90px;
+}
+
+.howling-abyss-img {
+    background-image: url(../../res/images/HowlingAbyss.jpg);
+    background-size: cover;
+    position: absolute;
+    height: calc(100vh - 64px);
+    width: 100%;
+    background-position: center;
+}
+
+.search-banner-caption {
+    position: absolute;
+    top: 54%;
+    right: 0px;
+    color: #c89e50;
+    font-family: beaufort;
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+    transition: all 1s ease;
+    cursor: default;
+}
+
+.search-banner-caption:hover .conspiracy {
+    color: white !important;
+    transition: all 1s ease;
+}
+
+@media only screen and (max-width: 500px) {
+    .search-banner > h1 {
+        font-family: 'Berthold Akzidenz Condensed';
+        font-size: 70px;
+        text-shadow: 2px 2px 2px #0b2238;
+        text-align: center;
+    }
+    .search-banner-lol {
+        font-size: 60px;
+    }
+    .search-banner {
+        width: 300px;
+    }
+    .search-banner-caption {
+        font-size: 14px;
+    }
+    .search-bar {
+        width: 85%;
+    }
+}

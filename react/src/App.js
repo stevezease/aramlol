@@ -1,21 +1,62 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Search from './components/search';
+import NavigationBar from './components/navigationbar';
+import PatchView from './components/patch';
+import Analyzer from './components/analyzer';
+import { connect } from 'react-redux';
+import { setChampionNames } from './reducers/championnames';
+import { bindActionCreators } from 'redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import loader from './utils/loader';
+import Loading from './components/loading/loading';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false
+        };
+        this.completeLoading = this.completeLoading.bind(this);
+    }
+
+    componentDidMount() {
+        this.setState({
+            loading: true
+        });
+        loader(this.completeLoading);
+    }
+
+    completeLoading() {
+        this.setState({
+            loading: false
+        });
+    }
+
+    render() {
+        return (
+            <Router>
+                <div>
+                    {this.state.loading ? <Loading /> : null}
+                    <NavigationBar />
+                    <Switch>
+                        <Route exact path="/" component={Search} />
+                        <Route path="/Search" component={Search} />
+                        <Route path="/Patch" component={PatchView} />
+                        <Route path="/Analyzer" component={Analyzer} />
+                    </Switch>
+                </div>
+            </Router>
+        );
+    }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators(
+        {
+            callSetChampionNames: setChampionNames
+        },
+        dispatch
+    );
+};
+export default connect(mapDispatchToProps)(App);

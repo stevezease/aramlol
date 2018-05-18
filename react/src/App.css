@@ -1,28 +1,39 @@
 .App {
   text-align: center;
+  font-family: Beaufort !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/*Common css for the same styling across all pages*/
+@font-face {
+  font-family: 'Berthold Akzidenz Condensed';
+  src: url('./res/fonts/Berthold Akzidenz Grotesk Condensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+@font-face {
+  font-family: 'Berthold Akzidenz Condensed';
+  src: url('./res/fonts/Berthold Akzidenz Grotesk Extra Bold Condensed Italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: initial;
 }
 
-.App-title {
-  font-size: 1.5em;
+@font-face {
+  font-family: 'Beaufort';
+  src: url('./res/fonts/BeaufortforLOL-Regular.eot');
+  src: url('./res/fonts/BeaufortforLOL-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./res/fonts/BeaufortforLOL-Regular.woff') format('woff'),
+  url('./res/fonts/BeaufortforLOL-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@font-face {
+  font-family: 'Beaufort';
+  src: url('./res/fonts/BeaufortforLOL-Bold.eot');
+  src: url('./res/fonts/BeaufortforLOL-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./res/fonts/BeaufortforLOL-Bold.woff') format('woff'),
+  url('./res/fonts/BeaufortforLOL-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
