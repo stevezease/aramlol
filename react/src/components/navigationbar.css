@@ -5,11 +5,74 @@
 }
 
 .nav-tabs-active {
-    background: linear-gradient(transparent, transparent, hsla(38, 15%, 56%, 0.4));
+    background: linear-gradient(
+        transparent,
+        transparent,
+        hsla(38, 15%, 56%, 0.4)
+    );
 }
 
 .logo {
-    height: 65%;
-    margin-top: 5px;
-    margin-left: 5px;
+    height: 70%;
+    width: auto;
+    margin-top: 8px;
+    margin-left: 10px;
 }
+.navigation-bar-left {
+    display: flex;
+}
+.navigation-bar-right {
+    display: flex;
+}
+
+.navigation-item {
+    color: #f1e6d0;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none !important;
+    padding-left:7px;
+    padding-right: 7px;
+    border-bottom: 2px transparent solid;
+    position: relative;
+    display: block;
+    font-size: 13px;
+
+}
+.navigation-item:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition: all .25s linear;
+    background: linear-gradient(
+        transparent,
+        transparent,
+        hsla(0, 0%, 90%, 0.6)
+    );
+}
+.navigation-item:hover:after{
+    color: white;
+    opacity: 1;
+}
+
+.navigation-item-active {
+    color: white;
+    background: linear-gradient(
+        transparent,
+        transparent,
+        hsla(0, 0%, 80%, 0.4)
+    );
+}
+
+.navigation-item-active:after {
+    background-image: url(../res/images/pointer.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition-duration: 0s;
+}
+
+

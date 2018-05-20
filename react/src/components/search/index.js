@@ -1,34 +1,53 @@
 import React, { Component } from 'react';
 import './index.css';
-// import rightpanel from '../../res/images/right-panel.png';
-// import leftpanel from '../../res/images/left-panel.png';
-import AutoComplete from 'material-ui/AutoComplete';
+import { championStaticData } from '../../input/input';
 
 class SearchView extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            championNames: new Set(),
+            valid: false
+        };
+    }
     state = {
         dataSource: []
     };
-    componentDidMount() {}
-    handleUpdateInput = value => {
-        this.setState({
-            dataSource: [value, value + value, value + value + value]
+    componentDidMount() {
+        const championNames = new Set();
+        const championData = championStaticData.data;
+        Object.keys(championData).forEach(key => {
+            championNames.add(championData[key].name);
         });
+        this.setState({
+            championNames: championNames
+        });
+    }
+    handleUpdateInput = value => {
+        let valid = false;
+        if (this.state.championNames.has(value)) {
+            valid = true;
+        }
+        this.setState({
+            valid: valid
+        });
+    };
+
+    handleKeyPress = e => {
+        if (e.key === 'Enter') {
+            console.log('Enter key pressed');
+            // write your functionality here
+        }
+    };
+    executeSearch = e => {
+        if (e.key === 'Enter') {
+            console.log('Enter key pressed');
+            // write your functionality here
+        }
     };
     render() {
         return (
             <div className="search-view">
-                {/* <div className="image-overlay">
-                    <img
-                        src={rightpanel}
-                        className="right-panel"
-                        alt="right panel"
-                    />
-                    <img
-                        src={leftpanel}
-                        className="left-panel"
-                        alt="left panel"
-                    />
-                </div> */}
                 <div className="howling-abyss-img" alt="howling-abyss-img" />
                 <div>
                     <div className="search-banner">
@@ -42,13 +61,19 @@ class SearchView extends Component {
                         </h4>
                     </div>
                     <div className="search-bar">
-                        <AutoComplete
+                        {/* <AutoComplete
+                            onKeyPress={this.handleKeyPress.bind(this)}
+                            filter={AutoComplete.caseInsensitiveFilter}
                             hintText="Type a Champion Name"
-                            dataSource={this.state.dataSource}
+                            dataSource={Array.from(this.state.championNames)}
                             onUpdateInput={this.handleUpdateInput}
                             floatingLabelText="Search Champion Information"
                             fullWidth={true}
-                        />
+                            menuStyle={{
+                                maxHeight: '200px',
+                                overflowY: 'auto'
+                            }}
+                        /> */}
                     </div>
                 </div>
             </div>
