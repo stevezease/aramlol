@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import championNames from './championnames';
+import sidebar from './sidebar';
 
 export const allReducers = combineReducers({
-    championNames: championNames
+    championNames: championNames,
+    sidebar: sidebar
 });

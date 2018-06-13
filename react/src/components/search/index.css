@@ -13,10 +13,15 @@
     z-index: 10;
 }
 
+.autocomplete-bar {
+    width: 100%;
+    position: absolute;
+    height: 40px;
+    border-radius: 5px;
+}
 .search-bar {
     position: absolute;
-    width: 56%;
-    background-color: white;
+    width: 46%;
     padding: 10px;
     padding-top: 0px;
     border-radius: 5px;
@@ -24,8 +29,7 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    top: calc(50% + 75px);
-    box-shadow: 1px 1px 3px #0b2238;
+    top: calc(50% + 60px);
 }
 
 .search-banner {
@@ -52,7 +56,7 @@
     background-image: url(../../res/images/HowlingAbyss.jpg);
     background-size: cover;
     position: absolute;
-    height: calc(100vh);
+    height: calc(100vh - 62px);
     width: 100%;
     background-position: center;
 }

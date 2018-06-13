@@ -9,7 +9,7 @@ export default function loader(callback) {
             const currentVersion = versions[0];
             axios
                 .get(
-                    `http://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/en_US/champion.json`
+                    `https://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/en_US/champion.json`
                 )
                 .then(championResponse => {
                     const championJSON = championResponse.data;

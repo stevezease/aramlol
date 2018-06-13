@@ -4,12 +4,12 @@ import Search from './components/search';
 import NavigationBar from './components/navigationbar';
 import PatchView from './components/patch';
 import Analyzer from './components/analyzer';
+import Champion from './components/champion/champion';
 import { connect } from 'react-redux';
 import { setChampionNames } from './reducers/championnames';
 import { bindActionCreators } from 'redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import loader from './utils/loader';
-import Loading from './components/loading/loading';
 
 class App extends Component {
     constructor(props) {
@@ -37,13 +37,17 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    {this.state.loading ? <Loading /> : null}
                     <NavigationBar />
                     <Switch>
                         <Route exact path="/" component={Search} />
+                        <Route path="/aramlol" component={Search} />
                         <Route path="/Search" component={Search} />
                         <Route path="/Patch" component={PatchView} />
                         <Route path="/Analyzer" component={Analyzer} />
+                        <Route
+                            path="/Champion/:champion"
+                            component={Champion}
+                        />
                     </Switch>
                 </div>
             </Router>

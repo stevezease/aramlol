@@ -2,3 +2,7 @@
     height: calc(100vh - 50px);
     background-color: #dee9f4;
 }
+
+.home {
+    height: 100vh;
+}

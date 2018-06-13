@@ -1,0 +1,7 @@
+.transition-overlay {
+    background-color: black;
+    height: calc(100% - 62px);
+    width: 100%;
+    position: absolute;
+    transition: .5s ease-in;
+}
