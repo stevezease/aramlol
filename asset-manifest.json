@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.98065868.css",
-  "main.css.map": "static/css/main.98065868.css.map",
-  "main.js": "static/js/main.9fcedb60.js",
-  "main.js.map": "static/js/main.9fcedb60.js.map",
+  "main.css": "static/css/main.3c95182f.css",
+  "main.css.map": "static/css/main.3c95182f.css.map",
+  "main.js": "static/js/main.7a33dc6b.js",
+  "main.js.map": "static/js/main.7a33dc6b.js.map",
   "static/media/BeaufortforLOL-Bold.eot": "static/media/BeaufortforLOL-Bold.dfaa3c36.eot",
   "static/media/BeaufortforLOL-Bold.ttf": "static/media/BeaufortforLOL-Bold.44fcc516.ttf",
   "static/media/BeaufortforLOL-Bold.woff": "static/media/BeaufortforLOL-Bold.d15e6ad5.woff",
@@ -17,7 +17,9 @@
   "static/media/fontawesome-webfont.ttf?v=4.7.0": "static/media/fontawesome-webfont.b06871f2.ttf",
   "static/media/fontawesome-webfont.woff2?v=4.7.0": "static/media/fontawesome-webfont.af7ae505.woff2",
   "static/media/fontawesome-webfont.woff?v=4.7.0": "static/media/fontawesome-webfont.fee66e71.woff",
+  "static/media/loading.gif": "static/media/loading.d831f2ac.gif",
   "static/media/logo-active.png": "static/media/logo-active.60b45982.png",
   "static/media/logo.png": "static/media/logo.46cbef23.png",
-  "static/media/notificationbuttons.png": "static/media/notificationbuttons.57880be3.png"
+  "static/media/notificationbuttons.png": "static/media/notificationbuttons.57880be3.png",
+  "static/media/spinner.png": "static/media/spinner.4c1308ba.png"
 }
