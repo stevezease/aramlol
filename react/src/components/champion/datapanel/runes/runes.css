@@ -1,0 +1,259 @@
+.runes-panel {
+    padding-top: 10px;
+}
+
+.runes-container {
+    display: flex;
+}
+
+.runes-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.perk-emblem {
+    position: relative;
+    height: 70px;
+    width: 60px;
+}
+
+.perk-ring {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.perk-keystone {
+    position: relative;
+}
+
+.perk-keystone:hover > .keystone-hover {
+    border: 4px solid transparent;
+}
+
+.keystone {
+    width: 100px;
+    position: relative;
+}
+.perk {
+    cursor: pointer;
+    position: relative;
+    height: 100px;
+}
+.keystone-hover {
+    top: 15px;
+    width: 65px;
+    z-index: 0;
+    height: 65px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    border-radius: 50%;
+}
+.keystone-hover-inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 21px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: 3px solid transparent;
+}
+
+.subperk {
+    padding: 3px;
+    height: 48px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transition: 0.1s border linear;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.subperk-image {
+    width: 44px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+.perk-icon {
+    width: 35px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.domination-flow {
+    background-color: #d03d42 !important;
+}
+.domination {
+    border-color: #d03d42 !important;
+}
+.sorcery-flow {
+    background-color: #8d91f6 !important;
+}
+.sorcery {
+    border-color: #8d91f6 !important;
+}
+.resolve-flow {
+    background-color: #a1d38d !important;
+}
+.resolve {
+    border-color: #a1d38d !important;
+}
+.inspiration-flow {
+    background-color: #4cb1bb !important;
+}
+.inspiration {
+    border-color: #4cb1bb !important;
+}
+.precision-flow {
+    background-color: #c1a976 !important;
+}
+.precision {
+    border-color: #c1a976 !important;
+}
+
+.domination-light {
+    border-color: rgba(208, 61, 66, 0.6) !important;
+}
+.sorcery-light {
+    border-color: #8d91f6 !important;
+}
+.resolve-light {
+    border-color: #a1d38d !important;
+}
+.inspiration-light {
+    border-color: #4cb1bb !important;
+}
+.precision-light {
+    border-color: #c1a976 !important;
+}
+
+.domination-hover:hover {
+    border-color: rgba(208, 61, 66, 0.7) !important;
+}
+.sorcery-hover:hover {
+    border-color: rgba(141, 145, 246, 0.7) !important;
+}
+.resolve-hover:hover {
+    border-color: rgba(161, 211, 141, 0.7) !important;
+}
+.inspiration-hover:hover {
+    border-color: rgba(76, 177, 187, 0.7) !important;
+}
+.precision-hover:hover {
+    border-color: rgba(197, 169, 114, 0.7) !important;
+}
+
+.rune-flow-inner {
+    width: 3px;
+    position: absolute;
+    top: 67px;
+    opacity: 0.45;
+    z-index: 0;
+    -webkit-animation-name: PulseInner;
+    animation-name: PulseInner;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rune-flow-primary {
+    height: 360px;
+}
+.rune-flow-sub {
+    height: 150px;
+}
+.rune-flow-outer {
+    width: 9px;
+    position: absolute;
+    top: 67px;
+    opacity: 0.15;
+    z-index: 0;
+    -webkit-animation-name: PulseOuter;
+    animation-name: PulseOuter;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@-webkit-keyframes PulseInner {
+    from {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 0.15;
+    }
+    to {
+        opacity: 0.45;
+    }
+}
+@keyframes PulseInner {
+    from {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 0.15;
+    }
+    to {
+        opacity: 0.45;
+    }
+}
+
+@-webkit-keyframes PulseOuter {
+    from {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.105;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+@keyframes PulseOuter {
+    from {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.105;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+.tippy-tooltip {
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    border: 1px solid #95b0c7;
+}
+.tippy-popper[x-placement^='right'] [x-arrow] {
+    border-right: 7px solid #000;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    left: -7px;
+    margin: 6px 0;
+}

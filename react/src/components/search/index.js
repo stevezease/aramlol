@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import colors from '../../styles/colors';
-import { championStaticData } from '../../input/input';
+import { connect } from 'react-redux';
 import Autocomplete from 'react-autocomplete';
 import TransitionOverlay from '../../widgets/transitionoverlay';
 
@@ -24,7 +24,8 @@ class SearchView extends Component {
     componentDidMount() {
         const championNames = new Set();
         const nameToId = new Map();
-        const championData = championStaticData.data;
+        console.log('search mounted', this.props);
+        const championData = this.props.static.champion.data;
         Object.keys(championData).forEach(key => {
             championNames.add(championData[key].name);
             nameToId.set(championData[key].name, key);
@@ -76,11 +77,12 @@ class SearchView extends Component {
         color: 'hsla(210, 27%, 68%, 1)',
         borderRadius: '5px',
         boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
-        padding: '4px 0px',
         fontSize: '24px',
         position: 'fixed',
         overflow: 'auto',
-        maxHeight: '20%'
+        maxHeight: '20%',
+        padding: '4px 10px',
+        boxSizing: 'border-box'
     };
     handleSearchChange = e => {
         const value = e.target.value;
@@ -116,12 +118,15 @@ class SearchView extends Component {
                 <div>
                     <div className="search-banner">
                         <h1>
-                            ARAM<span className="search-banner-lol">LOL</span>
+                            ARAM
+                            <span className="search-banner-lol">LOL</span>
                         </h1>
                         <h4 className="search-banner-caption">
                             <span className="conspiracy">ARAM</span> IS
-                            <span className="conspiracy"> LO</span>VE. ARAM IS
-                            <span className="conspiracy"> L</span>IFE.
+                            <span className="conspiracy"> LO</span>
+                            VE. ARAM IS
+                            <span className="conspiracy"> L</span>
+                            IFE.
                         </h4>
                     </div>
                     <div className="search-bar">
@@ -175,5 +180,5 @@ class SearchView extends Component {
         );
     }
 }
-
-export default SearchView;
+const mapStateToProps = state => ({ static: state.staticdata });
+export default connect(mapStateToProps)(SearchView);

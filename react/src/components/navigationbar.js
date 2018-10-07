@@ -62,7 +62,7 @@ class NavigationBar extends Component {
             display: 'flex',
             justifyContent: 'space-between',
             borderTop: `1px solid ${colors.blue}`,
-            borderBottom: `1px solid hsla(0, 0%, 100%, 0.5)`
+            borderBottom: '1px solid rgba(142, 168, 190, 0.60)'
         };
         return (
             <div className="navigation-bar" style={navbarStyle}>

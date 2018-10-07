@@ -9,6 +9,7 @@ import RunesDataPanel from './runes/runes';
 class DataPanel extends Component {
     constructor(props) {
         super(props);
+        this.state = {};
     }
     getDataPanel() {
         switch (this.props.sidebar) {
@@ -20,6 +21,8 @@ class DataPanel extends Component {
                 return <StatsDataPanel />;
             case 'runes':
                 return <RunesDataPanel />;
+            default:
+                return <StartDataPanel />;
         }
     }
     render() {

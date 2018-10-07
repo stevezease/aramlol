@@ -1,0 +1,28 @@
+.item-search {
+    background-color: black;
+    color: #8ea8be;
+    border: solid 1px #8ea8be;
+    background: url('../../../../res/images/search.png') top left no-repeat;
+    padding: 5px 10px;
+    padding-left: 25px;
+    outline: none;
+    margin: 5px 0px;
+    background-size: 23px;
+}
+.item-filter-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-dropdown {
+    background-color: black;
+    color: #8ea8be;
+    border: ridge 1px #8ea8be;
+    padding: 5px 10px;
+    outline: none;
+    margin: 5px 5px;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-appearance: none;
+}

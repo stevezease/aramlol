@@ -9,7 +9,7 @@ export const gold = '#c9aa71';
 
 export default {
     lightBlue: '#77A6D6',
-    blue: '#a7b6dc',
+    blue: '#8ea8be',
     darkBlue: '#6f87b9',
     lightGreen: '#8AD7D4',
     purple: '#CCCDFD',

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import championNames from './championnames';
+import staticdata from './staticdata';
 import sidebar from './sidebar';
 
 export const allReducers = combineReducers({
-    championNames: championNames,
+    staticdata: staticdata,
     sidebar: sidebar
 });
